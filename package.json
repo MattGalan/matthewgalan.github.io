@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/MatthewGalan/matthewgalan.github.io#readme",
   "dependencies": {
-    "pixi.js": "^5.2.4"
+    "pixi.js": "^5.2.4",
+    "simplex-noise": "^2.4.0"
   },
   "devDependencies": {
     "css-loader": "^3.5.3",
