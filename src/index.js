@@ -6,8 +6,8 @@ import Vector from './Vector';
 const Graphics = PIXI.Graphics;
 const simplex = new SimplexNoise();
 
-const width = 1024;
-const height = 1024;
+const width = window.innerWidth;
+const height = window.innerHeight;
 const margin = 10;
 
 const noiseScale = 128;
@@ -16,6 +16,18 @@ const dragCoefficient = 0.01;
 const bounceForce = 3;
 
 console.log("HIRE ME!");
+
+//Create a Pixi Application
+let app = new PIXI.Application({
+    width: width,
+    height: height,
+    antialias: true,
+    transparent: false,
+});
+
+app.renderer.backgroundColor = 0x1b171f;
+app.renderer.view.style.position = "absolute";
+app.renderer.view.style.display = "block";
 
 function respawnCircle(circle) {
     circle.xVel = 0;
@@ -56,26 +68,13 @@ function outOfBounds(circle) {
         circle.y > height + margin * 2;
 }
 
-//Create a Pixi Application
-let app = new PIXI.Application({
-    width: width,
-    height: height,
-    antialias: true,
-    transparent: false,
-});
-
-// app.renderer.view.style.position = "absolute";
-// app.renderer.view.style.display = "block";
-// app.renderer.autoResize = true;
-// app.renderer.resize(window.innerWidth, window.innerHeight);
-
 const circles = [];
 
 let i;
-for (i = 0; i < 50; i++) {
+for (i = 0; i < width * height / 20000; i++) {
     let circle = new Graphics();
 
-    circle.beginFill(0x9966FF);
+    circle.beginFill(0x4c355c);
     circle.drawCircle(0, 0, 8);
     circle.endFill();
 
