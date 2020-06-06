@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/MatthewGalan/matthewgalan.github.io#readme",
   "dependencies": {
+    "animejs": "^3.2.0",
     "pixi.js": "^5.2.4",
     "simplex-noise": "^2.4.0"
   },
