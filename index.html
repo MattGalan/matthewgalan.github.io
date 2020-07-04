@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Matt Galan</title>
+    <link rel="stylesheet" type="text/css" href="processed.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="cube">
+            <div class="petal-container">
+                <svg class="petal eight">
+                    <rect width="100%" height="100%" fill="#577590"  mask="url(#knockout-text)" />
+                </svg>
+            </div>
+
+            <div class="petal-container">
+                <svg class="petal seven">
+                    <rect width="100%" height="100%" fill="#43AA8B"  mask="url(#knockout-text)" />
+                </svg>
+            </div>
+
+            <div class="petal-container">
+                <svg class="petal six">
+                    <rect width="100%" height="100%" fill="#90BE6D" mask="url(#knockout-text)" />
+                </svg>
+            </div>
+
+            <div class="petal-container">
+                <svg class="petal five">
+                    <rect width="100%" height="100%" fill="#F9C74F"  mask="url(#knockout-text)" />
+                </svg>
+            </div>
+
+            <div class="petal-container">
+                <svg class="petal four">
+                    <rect width="100%" height="100%" fill="#F8961E" mask="url(#knockout-text)" />
+                </svg>
+            </div>
+
+            <div class="petal-container">
+                <svg class="petal three">
+                    <rect width="100%" height="100%" fill="#F3722C" mask="url(#knockout-text)" />
+                </svg>
+            </div>
+
+            <div class="petal-container">
+                <svg class="petal two">
+                    <rect width="100%" height="100%" fill="#F94144" mask="url(#knockout-text)"/>
+                </svg>
+            </div>
+
+            <div class="petal-container">
+                <svg class="petal one">
+                    <rect width="100%" height="100%" fill="#141414" mask="url(#knockout-text)"/>
+                    <mask id="knockout-text">
+                        <rect width="100%" height="100%" fill="#fff" />
+                        <text x="40%" y="47%" fill="#000" text-anchor="middle">matt</text>
+                        <text x="60%" y="63%" fill="#000" text-anchor="middle">galan</text>
+                    </mask>
+                </svg>
+            </div>
+        </div>
+
+        <div class="title">software engineer</div>
+
+        <div id="categories">
+            <button class="category" onclick="test()">
+                about
+            </button>
+            <button class="category">
+                experience
+            </button>
+            <button class="category">
+                contact
+            </button>
+
+            <div id="blocker"></div>
+        </div>
+
+        <div id="experience">
+            <div class="exp">
+                <header>
+                    <h1>Software Engineering Co-op</h1>
+                    <h2>Intuit</h2>
+                </header>
+                <ul>
+                    <li>first responsibility</li>
+                    <li>second responsibility</li>
+                    <li>third responsibility</li>
+                </ul>
+            </div>
+            
+            <div class="exp">
+                <header>
+                    <h1>Unity Instructor - Kids on Campus</h1>
+                    <h2>Rochester Institute of Technology</h2>
+                </header>
+                <ul>
+                    <li>Designed and wrote curriculum from scratch for use in two-week Unity workshops.</li>
+                    <li>Developed a flexible and intuitive Unity framework to be used by students.</li>
+                    <li>Taught 23 5th – 9th graders to make their very own 2D platforming game in Unity.</li>
+                    <li>Tools used: Unity, C#</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="about">
+            <img src="my-face.png"/>
+            
+            <div>
+                <p>
+                    Hello! I'm Matt Galan, a third year software engineering major at the
+                    Rochester Institute of Technology, born and raised in Fairport, NY.
+                </p>
+                <p>
+                    Although I'm interested in exploring the wider field of software engineering,
+                    I'm currently loving the user-focused front-end work I'm doing at Intuit. I love
+                    a good opportunity to combine my technical and creative skills, and front-end development
+                    allows me to do just that.
+                </p>
+                <p>
+                    My non-technical interests include hosting board game nights with friends, disc golfing,
+                    and destroying family friends in pickleball. I can ski just well enough to get myself into
+                    trouble, and even had a short-lived skateboarding phase.
+                </p>
+                <p>
+                    I'd love to get in contact with you. If you're interested in collaborating, employing, or just
+                    chatting, please head over to my contact page.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
