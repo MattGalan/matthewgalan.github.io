@@ -4,6 +4,10 @@ function remapCoords(coord) {
 
 const petals = document.querySelectorAll(".petal-container");
 
+petals.forEach((p, index) => {
+    p.style.zIndex = (7 - index);
+});
+
 window.onmousemove = event => {
     const x = 100 - 100 * event.clientX / window.innerWidth;
     const y = 100 - 100 * event.clientY / window.innerHeight;
@@ -11,7 +15,7 @@ window.onmousemove = event => {
     petals.forEach((p, index) => {
         setTimeout(() => {
             p.style.perspectiveOrigin = `${remapCoords(x)}% ${remapCoords(y)}%`;
-        }, index * 50);
+        }, (7 - index) * 50);
     });
 }
 

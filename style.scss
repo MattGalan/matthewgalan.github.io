@@ -99,10 +99,6 @@ p {
                 header {
                     border-left: solid 51px list.nth($rainbow, $i);
                 }
-
-                ::marker {
-                    color: list.nth($rainbow, $i);
-                }
             }
         }
 
@@ -159,7 +155,7 @@ p {
 
 @mixin blossom($index) {
     @keyframes #{blossom-+$index} {
-        from {
+    from {
             transform: translateZ(-0.001em);
         }
         to {
@@ -168,7 +164,7 @@ p {
     }
     animation-name: #{blossom-+$index};
     animation-duration: 2s;
-    animation-delay: #{(8 - $index) * .15 + s};
+    animation-delay: #{(7 - $index) * .15 + s};
     animation-timing-function: cubic-bezier(.39,1.77,.64,1);
     animation-fill-mode: forwards;
 }
