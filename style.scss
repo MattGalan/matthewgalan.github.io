@@ -39,6 +39,36 @@ body {
         background: $light-black;
         cursor: pointer;
         border: none;
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 500px;
+
+        &:hover {
+            &::before {
+                transform: translateZ(-0.2em) rotateZ(6deg);
+                transition: transform .5s cubic-bezier(.39,1.77,.64,1);
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            transform: translateZ(-0.01em);
+            transition: transform .5s;
+        }
+
+        @for $i from 1 through 7 {
+            &#{".button-bkg-" + $i} {
+                &::before {
+                    background: list.nth($rainbow, $i);
+                }
+            }
+        }
     }
 
     #blocker {
