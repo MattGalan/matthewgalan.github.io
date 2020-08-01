@@ -58,12 +58,17 @@ body {
   font-family: "Source Serif Pro", serif;
   font-size: 20px;
   line-height: 1.3em;
-  display: flex;
-  flex-flow: row wrap;
 }
 
 strong {
   font-weight: 700;
+}
+
+a {
+  color: #22223B;
+}
+a:visited {
+  color: #4A4E69;
 }
 
 .dot {
@@ -89,15 +94,16 @@ h1 {
 }
 
 #title {
-  flex: 1 1 40%;
+  position: fixed;
 }
 
 #sections {
-  flex: 1 1 600px;
+  width: 40%;
+  float: right;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
-  padding: 128px min(128px, 10vw);
+  padding: calc(10vw + 1.5em) min(128px, 10vw) 128px min(128px, 10vw);
 }
 
 .section {
@@ -113,6 +119,7 @@ h1 {
   position: absolute;
   color: #22223B;
   top: -0.25em;
+  left: 28px;
   font-size: 3em;
   text-shadow: 0 0 16px rgba(242, 233, 228, 0.5);
 }
@@ -189,6 +196,27 @@ p {
 }
 .experience .entry ul li {
   margin-top: 16px;
+}
+
+.contact {
+  position: relative;
+}
+.contact li {
+  margin-top: 16px;
+}
+.contact img {
+  vertical-align: bottom;
+  margin-right: 16px;
+}
+.contact .contact-dot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 180px;
+  height: 180px;
+  background: #4A4E69;
+  border-radius: 100% 0 32px 0;
+  box-shadow: 0 0 32px rgba(74, 78, 105, 0.25);
 }
 
 /*# sourceMappingURL=processed.css.map */
